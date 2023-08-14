@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    flex: 1;
+    flex-direction: row;
+    width: 100% !important;
+    padding: 20px;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar {
+    width: 110px;
+    padding: 20px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+.expanded {
+    width: 260px;
+}
+
+.cardcontent {
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkButton {
+    background-color: #011e3d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100px;
+    Width: 200PX;
+    border-radius: 10%;
+    box-shadow: 0 15px 14px rgba(0, 0, 0, 0.1);
+}
+
+.checkButton:hover {
+    border: 13PX solid #144f77;
+    font-size: 14px;
+}
+
+.imageColumn {
+    display: flex;
+    padding: 20px;
+}
+
+.h2 {
+    color: #011e3d;
+}
+
+.doctorTable {
+    width: 80%;
+    background-color: #c2d9f1;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 120px;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.doctorTable th,
+.doctorTable td {
+    border: 3px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.doctorTable th {
+    background-color: #011e3d;
+    color: #fff;
+    font-weight: bold;
+}

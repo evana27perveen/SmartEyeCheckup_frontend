@@ -1,0 +1,119 @@
+/* LandingPage.module.css */
+
+/* Main container */
+.landing-page {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-image: url('../../assets/eye1.jpg');
+    background-size: 100% 100%; /* Use 100% for both width and height */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-image: linear-gradient(86deg, #0056b3, #c0c0c0);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 23px;
+    height: 50px;
+  }
+  
+  .cta-button:hover {
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  /* Feature sections */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+  }
+  
+  .feature {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: #011e3d;
+    box-shadow: 0 15px 14px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 23px;
+  }
+  
+  .feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Call to action section */
+  .call-to-action {
+    background-color: #011e3d;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .call-to-action h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* Additional styles can be added as needed */
+  

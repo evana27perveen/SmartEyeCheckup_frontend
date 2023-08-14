@@ -1,0 +1,188 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.hr {
+    border: 1px solid #c8ddf3;
+    margin: 10px 8px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    background-color: #011e3d;
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: width 0.3s ease;
+}
+
+/* User Account Section */
+.userAccount {
+    display: flex;
+    align-items: center;
+    padding: 40px 10px 20px 10px;
+    color: #fff;
+}
+
+.userAccount img {
+    height: 45px;
+    border-radius: 50%;
+}
+
+.userAccount h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: none;
+    margin-left: 15px;
+    color: #fff;
+}
+
+/* Navigation Links */
+.links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: scroll;
+    height: calc(100% - 140px);
+}
+
+.icon {
+    color: #fff;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    color: #fff;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.links .li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.links span {
+    padding: 12px 10px;
+}
+
+.links li .link {
+    color: #fff !important;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    white-space: nowrap;
+    display: none;
+}
+
+.links li:hover {
+    background: #fff;
+    color: #011e3d !important;
+}
+
+.logout {
+    margin-top: 20px;
+}
+
+/* Hide Scrollbar */
+.links::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sidebar Hover Effects */
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar:hover .userAccount h2 {
+    display: block;
+    color: #fff;
+}
+
+.sidebar:hover .links li .link {
+    display: block;
+    justify-content: flex-start;
+    color: #fff;
+
+}
+
+.sidebar:hover .links li:hover .link {
+    color: #011e3d !important;
+}
+
+.sidebar:hover .links li:hover .icon {
+    background: #fff;
+    color: #011e3d !important;
+}
+
+.sidebar:hover .h4 {
+    display: block;
+}
+
+.sidebar:hover .hr {
+    border-color: #fff;
+}
+
+  .sidebar:hover .links li.active {
+    background: #fff;
+    color: #011e3d !important;
+}
+
+.sidebar:hover .links li.active .link {
+    color: #011e3d !important;
+}
+
+.sidebar:hover .links li.active .icon {
+    color: #011e3d !important;
+}
+
+.logoutButton {
+    display: none;
+}
+
+.sidebar:hover .links li .logoutButton {
+    background: none;
+    border: none;
+    color: #fff !important;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .sidebar:hover .links li:hover .logoutButton {
+    background: none;
+    border: none;
+    color: #011e3d !important;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
