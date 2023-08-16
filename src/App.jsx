@@ -9,7 +9,10 @@ import ProfileDisplay from './Components/ProfileScreens/ProfileDisplay';
 import PatientUpdate from './Components/ProfileScreens/PatientUpdate';
 import DoctorUpdate from './Components/ProfileScreens/DoctorUpdate';
 import Setting from './Components/SettingScreens/Setting';
-import AllDoctors from './Components/DoctorScreens/AllDoctors'
+import AllDoctors from './Components/DoctorScreens/AllDoctors';
+import CheckupCreate from './Components/CheckupScreens/CheckupCreate';
+import OverView from './Components/OverViewScreens/OverView';
+import MyPatients from './Components/OverViewScreens/MyPatients';
 
 
 
@@ -28,6 +31,9 @@ function App() {
         <Route path="/doctor-update" element={<DoctorUpdate />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="/doctors" element={<AllDoctors />} />
+        <Route path="/checkup-create" element={<CheckupCreate />} />
+        <Route path="/overview" element={<OverView />} />
+        <Route path="/my-patients" element={<MyPatients />} />
       </Routes>
     </BrowserRouter>
   );

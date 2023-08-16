@@ -30,7 +30,7 @@
   
   /* Hero section */
   .hero {
-    background-image: url('../../assets/eye1.jpg');
+    background-image: url('../../assets/images/eye1.jpg');
     background-size: 100% 100%; /* Use 100% for both width and height */
     color: #fff;
     padding: 100px 0;

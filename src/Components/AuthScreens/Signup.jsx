@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import API_BASE_URL from '../APIContext'
 import styles from './Login.module.css';
-import log from '../../assets/eye1.png'
+import log from '../../assets/images/eye1.png'
 import { Link } from 'react-router-dom';
 
 function Signup() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './DocProfile.module.css';
-import log from '../../assets/docP.png';
+import log from '../../assets/images/docP.png';
 import { useNavigate } from 'react-router-dom';
 import API_BASE_URL from '../APIContext';
 

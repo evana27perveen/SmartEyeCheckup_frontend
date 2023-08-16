@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import SideNav from './SideNav';
 import InfoCard from './InfoCard';
-import log from '../../assets/check1.jpg';
+import log from '../../assets/images/check1.jpg';
 import { useCookies } from 'react-cookie';
 import API_BASE_URL from '../APIContext';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
@@ -13,6 +14,8 @@ const Home = () => {
   const [doctors, setDoctors] = useState(0);
   const [patients, setPatients] = useState(0);
   const [checkups, setCheckups] = useState(0);
+
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -44,6 +47,11 @@ const Home = () => {
             }
           };
 
+          const handleCheckEyesClick = () => {
+            // Navigate to the checkup page when the button is clicked
+            navigate('/checkup-create'); // Update '/checkup' with the actual path of your checkup page
+          };
+
   return (
     <div className={styles.container}>
       <div className={`${styles.sidebar} ${isSidebarExpanded ? styles.expanded : ''}`}>
@@ -59,9 +67,9 @@ const Home = () => {
         <div className={styles.imageColumn}>
                     <img src={log} alt="Login" height="350px" width="600px" />
                 </div>
-        <button className={styles.checkButton}>
+          <button className={styles.checkButton} onClick={handleCheckEyesClick}>
             Check My Eyes
-        </button>
+          </button>
         </div>
       </div>
     </div>

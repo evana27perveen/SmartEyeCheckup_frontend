@@ -44,9 +44,8 @@
   }
   
   .checkButton:hover {
-    font-size: 18px;
-    height: 80px;
-    Width: 200PX;
+    border: 13PX solid #144f77;
+    font-size: 14px;
   }
 
   .imageColumn {

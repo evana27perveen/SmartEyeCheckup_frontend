@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import styles from './PatientProfile.module.css';
-import log from '../../assets/ptnP.png';
+import log from '../../assets/images/ptnP.png';
 import { useNavigate } from 'react-router-dom';
 import API_BASE_URL from '../APIContext';
 

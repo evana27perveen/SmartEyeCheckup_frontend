@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .form {
+    height: 35%;
+    border: 10px solid #9fc6f0;
+    border-radius: 15%;
+    margin-top: 3em;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F7F9F9;
+    display: flex;
+    padding: 45px;
+    box-shadow: rgba(32, 32, 77, 0.25) 0px 50px 100px -20px, rgba(3, 3, 3, 0.3) 0px 30px 60px -30px, rgba(4, 21, 39, 0.35) 0px -2px 6px 0px inset;
+  }
+
+  .inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px !important;
+    font-size: 14px;
+    border-radius:5px;
+    padding: 5px;
+    border: 2px solid #011e3d;
+  }
+  
+  .button {
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border-radius:5px;
+    border: 5px solid #9fc6f0;
+    color: #011e3d;
+  }
+
+  .button:hover {
+    border: 5px solid #011e3d;
+  }
+  
+  
+  .div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center!important;
+    align-items: center!important;
+    margin-top: 20px;
+  }
+  
+  .div2 {
+    margin-top: 5px;
+  }
+  
+  .pred {
+    font-size: 18px;
+    color: #011e3d;
+    border-bottom: 3px solid #011e3d;
+    border-top: 3px solid #011e3d;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+  }
+  
+  .btn2 {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #011e3d;
+    font-family: "Archivo Black";
+  }

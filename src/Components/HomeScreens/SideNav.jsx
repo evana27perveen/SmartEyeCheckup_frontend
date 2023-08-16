@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faChartLine, faFlag, faUser, faUsers, faUserDoctor, faHeartbeat, faCog, faEnvelope, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faUserDoctor, faCog, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import styles from './SideNav.module.css';
-import log from '../../assets/logo.gif';
+import log from '../../assets/images/logo.gif';
 import { useCookies } from 'react-cookie';
 
 
@@ -44,11 +44,13 @@ const SideNav = () => {
           <Link to="/doctors" className={styles.link}>In-house Doctors</Link>
         </li>
         <hr className={styles.hr} />
-        
-        <li>
+        {group.group === 'PATIENT' ? <li className={location.pathname === '/overview' ? styles.active : ''}>
           <FontAwesomeIcon icon={faBars} className={styles.icon}/>
           <Link to="/overview" className={styles.link}>Overview</Link>
-        </li>
+        </li> : <li className={location.pathname === '/my-patients' ? styles.active : ''}>
+          <FontAwesomeIcon icon={faBars} className={styles.icon}/>
+          <Link to="/my-patients" className={styles.link}>My Patients</Link>
+        </li>}
         
         <hr className={styles.hr} />
         <li className={location.pathname === '/setting' ? styles.active : ''}>
