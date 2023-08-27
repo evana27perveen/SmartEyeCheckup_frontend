@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
   const [token] = useCookies(['myToken']);
+  const [group] = useCookies(['myGroup']);
   const [id, setId] = useCookies(['myId'])
   const [doctors, setDoctors] = useState(0);
   const [patients, setPatients] = useState(0);
@@ -48,8 +49,7 @@ const Home = () => {
           };
 
           const handleCheckEyesClick = () => {
-            // Navigate to the checkup page when the button is clicked
-            navigate('/checkup-create'); // Update '/checkup' with the actual path of your checkup page
+            navigate('/checkup-create');
           };
 
   return (
@@ -67,9 +67,10 @@ const Home = () => {
         <div className={styles.imageColumn}>
                     <img src={log} alt="Login" height="350px" width="600px" />
                 </div>
+                {group.group === 'PATIENT' && 
           <button className={styles.checkButton} onClick={handleCheckEyesClick}>
             Check My Eyes
-          </button>
+          </button>}
         </div>
       </div>
     </div>

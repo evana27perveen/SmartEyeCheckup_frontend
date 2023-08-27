@@ -85,7 +85,7 @@ const OverView = () => {
             <tbody>
               {checkups.map((checkup) => (
                 <tr key={checkup.id}>
-                  <td>{checkup.date}</td>
+                  <td>{new Date(checkup.date).toLocaleDateString('en-GB')}   at   {new Date(checkup.date).toLocaleTimeString()}</td>
                   <td>{checkup.predicted_result}</td>
                   <td>
                     {checkup.assigned_doctor && (

@@ -3,11 +3,14 @@ import styles from './MyPatients.module.css';
 import SideNav from '../HomeScreens/SideNav';
 import { useCookies } from 'react-cookie';
 import API_BASE_URL from '../APIContext';
+import { useNavigate } from 'react-router-dom';
 
 const MyPatients = () => {
   const [isSidebarExpanded, setSidebarExpanded] = useState(false);
   const [token] = useCookies(['myToken']);
   const [checkups, setCheckups] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch checkup data
@@ -35,7 +38,7 @@ const MyPatients = () => {
 
       if (response.ok) {
         const data = await response.json();
-        return data; 
+        return data;
       } else {
         console.error('Error fetching doctor data:', response.status);
         return null;
@@ -48,7 +51,7 @@ const MyPatients = () => {
 
   const PatientInfo = ({ patientID }) => {
     const [patientInfo, setPatientInfo] = useState(null);
-  
+
     useEffect(() => {
       fetchPatientInfo(patientID).then((data) => {
         if (data) {
@@ -56,16 +59,38 @@ const MyPatients = () => {
         }
       });
     }, [patientID]);
-  
+
     if (!patientInfo) {
       return null;
     }
-  
+
     return <div>
-    <p>{patientInfo.full_name}</p>
-    <small>{patientInfo.phone_number}</small>
-    </div>; 
+      <p>{patientInfo.full_name}</p>
+      <small>{patientInfo.phone_number}</small>
+    </div>;
   };
+
+  const handleRejectPatient = async (checkupID) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/checkup-update/${checkupID}/mark_as_rejected/`, {
+        method: 'PUT',
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${token.access_token}`,
+        },
+      });
+
+      if (response.ok) {
+        navigate('/home');
+      } else {
+        console.error('Error rejecting patient:', response.status);
+      }
+    } catch (error) {
+      console.error('Error rejecting patient:', error);
+    }
+  };
+
+
 
   return (
     <div className={styles.container}>
@@ -82,6 +107,7 @@ const MyPatients = () => {
                 <th>Eye</th>
                 <th>Detected Result</th>
                 <th>Patient</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -90,16 +116,25 @@ const MyPatients = () => {
                   <td>{checkup.date}</td>
                   <td>
                     <img
-                        src={checkup.eye_vision}
-                        alt="eye"
-                        height="150px"
-                        width="200px"
+                      src={checkup.eye_vision}
+                      alt="eye"
+                      height="150px"
+                      width="200px"
                     />
                   </td>
                   <td>{checkup.predicted_result}</td>
                   <td>
-                      <PatientInfo patientID={checkup.patient} />
+                    <PatientInfo patientID={checkup.patient} />
                   </td>
+                  <td>
+                    <button
+                      className={styles.actionButton}
+                      onClick={() => handleRejectPatient(checkup.id)}
+                    >
+                      Reject
+                    </button>
+                  </td>
+
                 </tr>
               ))}
             </tbody>
